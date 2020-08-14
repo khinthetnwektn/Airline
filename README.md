@@ -7,4 +7,5 @@ Airline Django
 - python manage.py startapp appname
 
 --------------------------------------
+# Project Structure
 - create new python file -> urls.py under the appname
