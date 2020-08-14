@@ -1,5 +1,5 @@
 # Airline
-Airline Django 
+Airline Django Project
 
 # Startup
 - pip install django
