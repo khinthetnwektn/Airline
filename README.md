@@ -5,6 +5,9 @@ Airline Django Project
 - pip install django
 - django-admin startproject projectname
 - python manage.py startapp appname
+- python manage.py makemigrations
+- python manage.py migrate
+
 
 --------------------------------------
 # Project Structure
