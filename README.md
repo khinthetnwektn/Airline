@@ -17,19 +17,19 @@ Airline Django Project
 
 -------------------------------------
 # Database Operations
->>> from flights.models import Airport, Flight
->>> one = Airport(code="First", city="New York")
->>> two = Airport(code = "Second", city = "London")
->>> one.save()
->>> two.save()
->>> f = Flight(origin=one, destination=two, duration=125)
->>> f.save()
->>> f.origin
-<Airport: New York (First)>
->>> f.destination
-<Airport: London (Second)>
->>> f
-<Flight: 1 - New York (First) to London (Second)>
->>> f.origin.code
-'First'
+- >>> from flights.models import Airport, Flight
+- >>> one = Airport(code="First", city="New York")
+- >>> two = Airport(code = "Second", city = "London")
+- >>> one.save()
+- >>> two.save()
+- >>> f = Flight(origin=one, destination=two, duration=125)
+- >>> f.save()
+- >>> f.origin
+=> <Airport: New York (First)>
+- >>> f.destination
+=> <Airport: London (Second)>
+- >>> f
+=> <Flight: 1 - New York (First) to London (Second)>
+- >>> f.origin.code
+=> 'First'
 
