@@ -33,3 +33,9 @@ Airline Django Project
 - >>> f.origin.code
 => 'First'
 
+
+# Register model to admin
+- admin.py => admin.site.register(modelname)
+- cmd => python manage.py createsuperuser
+
+
