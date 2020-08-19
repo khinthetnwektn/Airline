@@ -13,8 +13,10 @@ def index(request):
 def flight(request, flight_id):
     try:
         flight = Flight.objects.get(pk=flight_id)
-    except Flight.DoesNotExit:
+    except Flight.DoesNotExist:
         raise Http404("Flight does not exit.")
-    contex = {
+    context = {
         "flight": flight
     }
+
+    return render(request, 'flights/flight.html', context)
