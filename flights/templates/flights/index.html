@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-</head>
-<body>
+{% extends "flights/base.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block body %}
     <h1>Flights</h1>
     <ul>
         {% for flight in flights %}
@@ -13,5 +13,4 @@
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}
