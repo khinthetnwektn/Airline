@@ -14,4 +14,7 @@ def flight(request, flight_id):
     try:
         flight = Flight.objects.get(pk=flight_id)
     except Flight.DoesNotExit:
-        raise Http404("Flight does not exit")
+        raise Http404("Flight does not exit.")
+    contex = {
+        "flight": flight
+    }
