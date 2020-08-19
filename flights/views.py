@@ -18,5 +18,4 @@ def flight(request, flight_id):
     context = {
         "flight": flight
     }
-
     return render(request, 'flights/flight.html', context)
