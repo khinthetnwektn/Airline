@@ -39,3 +39,14 @@ Airline Django Project
 - cmd => python manage.py createsuperuser
 
 
+cmd=>
+from flights.models import Flight, Passenger
+f = Flight.objects.get(pk=1)
+f
+p = Passenger(first="Alice", last="Genny")
+p.save()
+p.flight
+p.flight.add(f)
+p.flight.all() 
+
+f.passengers.all()
