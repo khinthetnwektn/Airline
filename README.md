@@ -39,7 +39,7 @@ Airline Django Project
 - cmd => python manage.py createsuperuser
 
 
-- cmd=>
+- cmd=> python manage.py shell
 - from flights.models import Flight, Passenger
 - f = Flight.objects.get(pk=1)
 - f
