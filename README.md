@@ -50,3 +50,6 @@ Airline Django Project
 - p.flight.all() 
 
 - f.passengers.all()
+-----------------------------------------------------------------------
+# Django authentication
+- django.contrib.auth
