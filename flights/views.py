@@ -17,16 +17,19 @@ def flight(request, flight_id):
         flight = Flight.objects.get(pk=flight_id)
     except Flight.DoesNotExist:
         raise Http404("Flight does not exit.")
+    print("Flight => ", Passenger.objects.exclude(flights=flight).all())
     context = {
         "flight": flight,
-        "passengers": Passenger.objects.all(),
-        "non-passengers": Passenger.objects.exclude(flights=flight).all() #select filter
+        "passengers": flight.passengers.all(),
+        "non_passengers": Passenger.objects.exclude(flights=flight).all()
     }
     return render(request, 'flights/flight.html', context)
 
 def book(request, flight_id):
+
     try:
         passenger_id = int(request.POST["passenger"])
+        print("passenger", passenger_id)
         passenger = Passenger.objects.get(pk=passenger_id)
         flight = Flight.objects.get(pk=flight_id)
 
@@ -38,4 +41,4 @@ def book(request, flight_id):
         return render(request, 'flights/error.html', {"message": "No passenger."})
 
     passenger.flights.add(flight)
-    return HttpResponseRedirect(reverse("flight", args=(flight_id,)))
+    return HttpResponseRedirect(reverse('flight', args=(flight_id,)))
