@@ -53,3 +53,9 @@ Airline Django Project
 -----------------------------------------------------------------------
 # Django authentication
 - django.contrib.auth
+-----------------------------------------------------------------------
+# Templates Tags in Django
+- in operator => The in operator will check whether the number is in the list or not.
+{% if number in list %}
+    <p>Yes the number is in the list</p>
+{% endif %}
